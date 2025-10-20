@@ -1,108 +1,65 @@
-body {
-  font-family: 'Poppins', sans-serif;
+ body {
   margin: 0;
-  background: #f3f3f3;
-  color: #222;
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #fff8fc;
+  color: #333;
+  padding-top: 60px; /* espacio para el menú arriba */
 }
 
-.header {
-  text-align: center;
-  padding: 15px;
-  background: #e61ea4;
+/* 🌸 Menú superior fijo */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffe4f1;
+  border-bottom: 2px solid #ff99cc;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+/* 💖 Botones del menú */
+.menu button {
+  background: #ffb6c1;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 10px;
   color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background: #ff66b2;
+  transform: scale(1.1);
+}
+
+/* 🏰 Contenido principal */
+#root {
+  padding: 15px;
+  text-align: center;
+}
+
+/* 🎨 Tarjetas de personajes */
+#la-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
 }
 
 .c-lista-personaje {
-  display: inline-block;
-  text-align: center;
   background: white;
-  margin: 10px;
+  border-radius: 10px;
   padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  cursor: pointer;
-  width: 120px;
+  box-shadow: 0 2px 5px rgba(255, 182, 193, 0.3);
+  transition: 0.3s;
 }
 
-.c-lista-personaje img {
-  border-radius: 10px;
-}
-
-#buscador {
-  text-align: center;
-  margin: 10px;
-}
-
-#buscador input {
-  padding: 8px;
-  width: 80%;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-#filtros {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
-  padding: 5px;
-}
-
-#filtros button {
-  background: #d516b9;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#filtros button:hover {
-  background: #ff00e1;
-}
-
-.menu-tabs {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #222;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-}
-.menu-tabs button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.menu-tabs button:hover {
-  color: #ffcc00;
-}
-
-.detail {
-  text-align: center;
-  padding: 20px;
-}
-
-.original, .informativa {
-  text-align: center;
-  padding: 30px;
-}
-
-.splash {
-  text-align: center;
-  margin-top: 100px;
-  color: #ff66cc;
-  font-family: 'Comic Sans MS', cursive;
-}
-.splash .logo {
-  width: 100px;
-  animation: girar 2s infinite ease-in-out;
-}
-@keyframes girar {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(10deg) scale(1.1); }
-  100% { transform: rotate(0deg); }
+.c-lista-personaje:hover {
+  transform: scale(1.05);
+  background-color: #ffe6f2;
 }
