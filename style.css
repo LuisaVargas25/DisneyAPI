@@ -1,0 +1,92 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f3f3f3;
+  color: #222;
+}
+
+.header {
+  text-align: center;
+  padding: 15px;
+  background: #0055aa;
+  color: white;
+}
+
+.c-lista-personaje {
+  display: inline-block;
+  text-align: center;
+  background: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  width: 120px;
+}
+
+.c-lista-personaje img {
+  border-radius: 10px;
+}
+
+#buscador {
+  text-align: center;
+  margin: 10px;
+}
+
+#buscador input {
+  padding: 8px;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px;
+}
+
+#filtros button {
+  background: #0055aa;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#filtros button:hover {
+  background: #0077ff;
+}
+
+.menu-tabs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.menu-tabs button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.menu-tabs button:hover {
+  color: #ffcc00;
+}
+
+.detail {
+  text-align: center;
+  padding: 20px;
+}
+
+.original, .informativa {
+  text-align: center;
+  padding: 30px;
+}
