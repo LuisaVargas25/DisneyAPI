@@ -94,4 +94,3 @@ async function FiltroConexion(Elfiltro) {
   personajes = await Conexion(Elfiltro);
   Home();
 }
-
