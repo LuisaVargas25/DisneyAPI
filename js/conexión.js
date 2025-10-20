@@ -29,7 +29,7 @@ async function Conexion(filtrotipo) {
 
       items = items.concat(lista);
       page++;
-      if (page > 10) seguir = false;
+      if (page > 50) seguir = false;
 
     } catch (err) {
       console.error("⚠️ Error cargando página", page, err);

@@ -8,22 +8,26 @@
 </head>
 <body>
 
+  <!-- Contenedor principal -->
   <main id="root"></main>
+
+  <!-- Contenedor para las pestañas (menú inferior) -->
   <div id="menu"></div>
 
-  <!-- Scripts -->
-  <script src="js/conexion.js"></script>
+  <!-- Archivos JS (importantes en este orden) -->
+  <script src="js/conexión.js"></script>
   <script src="js/home.js"></script>
   <script src="js/personaje.js"></script>
   <script src="js/favoritos.js"></script>
   <script src="js/informativa.js"></script>
-  <script src="js/menu.js"></script>
+  <script src="js/original.js"></script>
 
- <script src="js/original.js"></script>
-<script>
-  General();
-  Menu();  <!-- sigue llamándose igual -->
-</script>
+  <script>
+    // Cargar personajes primero
+    General();  
+    // Crear el menú (pestañas)
+    Menu();     
+  </script>
 
 </body>
 </html>
