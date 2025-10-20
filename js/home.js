@@ -15,28 +15,28 @@ function generarLista(arrayPersonajes) {
 
 window.Home = async function Home() {
   const root = document.getElementById("root");
-  if (root) root.innerHTML = "";
+  if (root) root.innerHTML = ""; // limpia el contenido anterior
 
-  const header = document.createElement("div");
+  const header = document.createElement("div"); // encabezado
   header.className = "header";
   header.innerHTML = `<h1>DisneyDex</h1><p>Explora el mágico mundo de Disney</p>`;
 
-  const buscador = document.createElement("div");
+  const buscador = document.createElement("div"); // barra de búsqueda
   buscador.id = "buscador";
   buscador.innerHTML = `<input id="search" placeholder="Buscar personaje..." oninput="FiltrarBusqueda(this.value)" />`;
 
- var contenedorFiltro = document.createElement("div");
-contenedorFiltro.id = "filtros";
-contenedorFiltro.innerHTML = `
+  var contenedorFiltro = document.createElement("div"); // botones de filtro
+  contenedorFiltro.id = "filtros";
+  contenedorFiltro.innerHTML = `
     <button onclick="FiltroConexion('All')">Todos</button>
-
   `;
 
-  const listaHTML = generarLista(personajes);
+  const listaHTML = generarLista(personajes); // genera la lista completa
   const contenedorPersonajes = document.createElement("section");
   contenedorPersonajes.id = "la-lista";
   contenedorPersonajes.innerHTML = listaHTML;
 
+  // agrega todo al contenedor principal
   root.appendChild(header);
   root.appendChild(buscador);
   root.appendChild(contenedorFiltro);
@@ -44,8 +44,9 @@ contenedorFiltro.innerHTML = `
 };
 
 window.FiltrarBusqueda = function FiltrarBusqueda(q) {
-  q = q.toLowerCase();
-  const results = personajes.filter(p => p.name && p.name.toLowerCase().includes(q));
+  q = q.toLowerCase(); // convierte a minúsculas
+  const results = personajes.filter(p => p.name && p.name.toLowerCase().includes(q)); // filtra coincidencias
   const listaEl = document.getElementById("la-lista");
-  if (listaEl) listaEl.innerHTML = generarLista(results);
+  if (listaEl) listaEl.innerHTML = generarLista(results); // muestra resultados
 };
+
