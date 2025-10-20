@@ -1,17 +1,30 @@
-// Menú y pestañas de navegación para DisneyDex
-window.Menu = function Menu() {
-  const root = document.getElementById("menu");
-  if (!root) return;
+function Menu() {
+  const menu = document.getElementById("menu");
+  if (!menu) return;
 
-  root.innerHTML = `
-    <nav class="menu-tabs">
-      <button onclick="Home()">🏠 Inicio</button>
-      <button onclick="Favoritos()">⭐ Favoritos</button>
-      <button onclick="Informativa()">ℹ️ Info</button>
-      <button onclick="Original()">🎁 Original</button>
+  menu.innerHTML = `
+    <nav class="menu">
+      <button onclick="Home()">🏰 Inicio</button>
+      <button onclick="Favoritos()">💖 Favoritos</button>
+      <button onclick="Informativa()">📘 Info</button>
+      <button onclick="Original()">🌸 Original</button>
+      <button onclick="alert('Próximamente 💫')">📤 Compartir</button>
     </nav>
   `;
-};
+}
+
+
+
+//  Función simple para el botón “Compartir”
+function Compartir() {
+  const root = document.getElementById("root");
+  root.innerHTML = `
+    <section class="compartir">
+      <h2>📤 Compartir</h2>
+      <p>Esta función estará disponible en próximas versiones 💫</p>
+    </section>
+  `;
+}
 
 function Original() {
   const contenedor = document.getElementById("root");
