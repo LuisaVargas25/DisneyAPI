@@ -80,8 +80,10 @@ async function General() {
 
   //  Detener el texto animado y mostrar Home
   clearInterval(intervalo);
-  console.log(`Total de personajes cargados: ${personajes.length}`);
-  Home();
+console.log(`✅ Total de personajes cargados: ${personajes.length}`);
+Home();
+Menu();
+
 }
 
 //Filtrar personajes (por películas o series)
@@ -92,3 +94,4 @@ async function FiltroConexion(Elfiltro) {
   personajes = await Conexion(Elfiltro);
   Home();
 }
+
