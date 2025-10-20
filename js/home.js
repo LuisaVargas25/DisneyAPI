@@ -25,14 +25,11 @@ window.Home = async function Home() {
   buscador.id = "buscador";
   buscador.innerHTML = `<input id="search" placeholder="Buscar personaje..." oninput="FiltrarBusqueda(this.value)" />`;
 
-  const contenedorFiltro = document.createElement("div");
-  contenedorFiltro.id = "filtros";
-  contenedorFiltro.innerHTML = `
-      <button onclick="FiltroConexion('All')">Todos</button>
-      <button onclick="FiltroConexion('Frozen')">Frozen</button>
-      <button onclick="FiltroConexion('The Lion King')">The Lion King</button>
-      <button onclick="FiltroConexion('Mickey Mouse Works')">Mickey Mouse</button>
-      <button onclick="FiltroConexion('Toy Story')">Toy Story</button>
+ var contenedorFiltro = document.createElement("div");
+contenedorFiltro.id = "filtros";
+contenedorFiltro.innerHTML = `
+    <button onclick="FiltroConexion('All')">Todos</button>
+
   `;
 
   const listaHTML = generarLista(personajes);
